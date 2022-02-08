@@ -1,0 +1,15 @@
+{
+  "name": "BD_estagio_viptech",
+  "version": "1.0.0",
+  "description": "Banco de dados viptech",
+  "main": "index.js",
+  "repository": "https://github.com/PedroAndradeSar/estagiobd.git",
+  "author": "Pedro Andrade Sartorato <phandradesar@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
