@@ -9,17 +9,14 @@ module.exports = (sequelize, DataTypes) => {
         autoIncrement: true,
       },
       marca: {
-        type: DataType.INTEGER,
+        type: DataType.STRING(200),
         allowNull: false,
-        references: {
-          model: "produto",
-          key: "id",
-        },
+        
       },
     },
     {
       tableName: "marca",
-      timestamps: fase,
+      timestamps: falsse,
     }
   );
 

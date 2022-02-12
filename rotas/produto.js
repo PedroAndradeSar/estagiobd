@@ -1,5 +1,6 @@
 const { Router } = require("express"); //chamar a função o recurso Router {desestruturando} da função express
 const router = Router(); // criar rotas de forma ordenada e organizada.
+const model = require('../bd/index')
 
 //Devolver uma lista de objetos ou um objeto
 router.get("/", (req, res) => {
@@ -16,8 +17,19 @@ router.get("/", (req, res) => {
 
 //Criar um recurso novo
 router.post("/", (req, res) => {
-  console.log(req.body); //metodo usado para enchergar a msg realziada no post
-  res.send("Rota para criar produto");
+  const produto = {
+    id_name,
+    id_produto,
+    id_valor,
+    data,
+    foto,
+    cor,
+    marca,
+  } = req.body;
+  // const { id_name, id_produto, id_valor, data, foto, cor, marca } = req.body;
+
+  // const produto = await criar( id_name, id_produto, id_valor, data, foto, cor, marca );
+  console.log(produto)
 });
 
 //Atualizar um recurso existente
