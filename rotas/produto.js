@@ -39,11 +39,12 @@ router.post("/", async (req, res) => {
 router.put("/:id_produto", async (req, res) => {//para definir os parametros da rota é colocado "/:"
  
   try{
-    let id_produto = req.params.id; // é usado a vareavel REQuisição juntamente com a "parans" que são as vareaveis que trafega pela url no caso "parans.id" - pois esta sendo a mesma propriedade em cima. 
+    let {id_produto} = req.params; // é usado a vareavel REQuisição juntamente com a "parans" que são as vareaveis que trafega pela url no caso "parans.id" - pois esta sendo a mesma propriedade em cima. 
     let dados = req.body;
      
-
-    await atualizar(id_produto, dados);console.log("teste put");
+    // console.log("teste put");
+    await atualizar(id_produto, dados);
+    // console.log("teste put");
     const resultado = await buscarPorId(id_produto);
 
     res.send(resultado);

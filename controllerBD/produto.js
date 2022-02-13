@@ -6,6 +6,7 @@ let controller = {};
 //criar produto com os seguntes requisitos
 controller.criar = async ( foto, nome, valor, cor, marca) => {
     try{
+        console.log("teste put");
        return await Produto.create({
        
         foto,
@@ -37,24 +38,25 @@ controller.buscarPorId = async (id_produto) => {
         throw erro;
     }
 };
-controller.atualizar = async (foto, nome, valor,  cor, marca ) => {
+controller.atualizar = async (id_produto, { foto, nome, valor,  cor, marca }) => {
+    // console.log("teste put");
     try {
+        // console.log("teste put");
     return await Produto.update(
     {
-        
         foto,
         nome,
         valor,
-
         cor,
         marca,
     },
     {
         where: {
-            id_produto
+            id_produto,
         }
     })
-    } catch (erro) {
+    } catch (erro) { 
+        // console.log(erro)
         throw erro;
     }
 };
