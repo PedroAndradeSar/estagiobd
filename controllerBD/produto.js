@@ -1,16 +1,17 @@
 const {Produto, sequelize} = require("../bd");
-const Produto = require("../bd/produto");
+//const Produto = require("../bd/produto");
 
 let controller = {};
 
-controller.criar = async ( id_produto, foto, nome, valor, data, cor, marca) => {
+//criar produto com os seguntes requisitos
+controller.criar = async ( foto, nome, valor, cor, marca) => {
     try{
        return await Produto.create({
-        id_produto,
+       
         foto,
         nome,
         valor,
-        data,
+     
         cor,
         marca
         });
@@ -36,15 +37,15 @@ controller.buscarPorId = async (id_produto) => {
         throw erro;
     }
 };
-controller.atualizar = async (id, { id_produto, foto, nome, valor, data, cor, marca }) => {
+controller.atualizar = async (foto, nome, valor,  cor, marca ) => {
     try {
     return await Produto.update(
     {
-        id_produto,
+        
         foto,
         nome,
         valor,
-        data,
+
         cor,
         marca,
     },

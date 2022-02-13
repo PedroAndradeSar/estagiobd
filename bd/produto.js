@@ -22,7 +22,7 @@ module.exports = (sequelize, DataType) => {
     },
     data: {
       type: DataType.DATE,
-      allowNull: false,
+      // allowNull: false,
       toDefaultValue: new (Date),
     },
     cor: {
