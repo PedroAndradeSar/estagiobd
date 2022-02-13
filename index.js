@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 
+app.use(cors());//onitegração com o banco de dados 
 app.use(express.json());//recurso que converte o body no que iremos usar, no caso o "json", pega as informaçoes e salva no banco de dados, para acessar os valores das variaveis usa o req.body.
 
 const produto = require("./rotas/produto"); //usado para chamar a rota de produtos
