@@ -55,12 +55,13 @@ router.put("/:id_produto", async (req, res) => {//para definir os parametros da 
 });
 
 //Remover um recurso existente
-router.delete("/:id_produto", async (req, res) => {
+router.delete("/:id_produto", async (req, res) => { 
+  // console.log("teste delet")
   // let id = req.params.id; // a função let serve
   // res.send("Rota para deletar um recurso existente");
   try {
-    await remover(req.params.id);
-
+    await remover(req.params.id_produto);
+// console.log("teste delet2")
     res.send();
   } catch (erro) {
     console.log(erro);
